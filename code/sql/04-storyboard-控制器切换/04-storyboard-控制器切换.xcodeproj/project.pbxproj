@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184C44FD1A2D9846009C9416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C44FC1A2D9846009C9416 /* main.m */; };
+		184C45001A2D9846009C9416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C44FF1A2D9846009C9416 /* AppDelegate.m */; };
+		184C45031A2D9846009C9416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45021A2D9846009C9416 /* ViewController.m */; };
+		184C45061A2D9846009C9416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184C45041A2D9846009C9416 /* Main.storyboard */; };
+		184C45081A2D9846009C9416 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184C45071A2D9846009C9416 /* Images.xcassets */; };
+		184C450B1A2D9846009C9416 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184C45091A2D9846009C9416 /* LaunchScreen.xib */; };
+		184C45171A2D9846009C9416 /* _4_storyboard______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45161A2D9846009C9416 /* _4_storyboard______Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		184C45111A2D9846009C9416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184C44EF1A2D9846009C9416 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184C44F61A2D9846009C9416;
+			remoteInfo = "04-storyboard-控制器切换";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		184C44F71A2D9846009C9416 /* 04-storyboard-控制器切换.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04-storyboard-控制器切换.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		184C44FB1A2D9846009C9416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184C44FC1A2D9846009C9416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		184C44FE1A2D9846009C9416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		184C44FF1A2D9846009C9416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		184C45011A2D9846009C9416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		184C45021A2D9846009C9416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		184C45051A2D9846009C9416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		184C45071A2D9846009C9416 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		184C450A1A2D9846009C9416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		184C45101A2D9846009C9416 /* 04-storyboard-控制器切换Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "04-storyboard-控制器切换Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		184C45151A2D9846009C9416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184C45161A2D9846009C9416 /* _4_storyboard______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_4_storyboard______Tests.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		184C44F41A2D9846009C9416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184C450D1A2D9846009C9416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		184C44EE1A2D9846009C9416 = {
+			isa = PBXGroup;
+			children = (
+				184C44F91A2D9846009C9416 /* 04-storyboard-控制器切换 */,
+				184C45131A2D9846009C9416 /* 04-storyboard-控制器切换Tests */,
+				184C44F81A2D9846009C9416 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		184C44F81A2D9846009C9416 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				184C44F71A2D9846009C9416 /* 04-storyboard-控制器切换.app */,
+				184C45101A2D9846009C9416 /* 04-storyboard-控制器切换Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		184C44F91A2D9846009C9416 /* 04-storyboard-控制器切换 */ = {
+			isa = PBXGroup;
+			children = (
+				184C44FE1A2D9846009C9416 /* AppDelegate.h */,
+				184C44FF1A2D9846009C9416 /* AppDelegate.m */,
+				184C45011A2D9846009C9416 /* ViewController.h */,
+				184C45021A2D9846009C9416 /* ViewController.m */,
+				184C45041A2D9846009C9416 /* Main.storyboard */,
+				184C45071A2D9846009C9416 /* Images.xcassets */,
+				184C45091A2D9846009C9416 /* LaunchScreen.xib */,
+				184C44FA1A2D9846009C9416 /* Supporting Files */,
+			);
+			path = "04-storyboard-控制器切换";
+			sourceTree = "<group>";
+		};
+		184C44FA1A2D9846009C9416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				184C44FB1A2D9846009C9416 /* Info.plist */,
+				184C44FC1A2D9846009C9416 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		184C45131A2D9846009C9416 /* 04-storyboard-控制器切换Tests */ = {
+			isa = PBXGroup;
+			children = (
+				184C45161A2D9846009C9416 /* _4_storyboard______Tests.m */,
+				184C45141A2D9846009C9416 /* Supporting Files */,
+			);
+			path = "04-storyboard-控制器切换Tests";
+			sourceTree = "<group>";
+		};
+		184C45141A2D9846009C9416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				184C45151A2D9846009C9416 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		184C44F61A2D9846009C9416 /* 04-storyboard-控制器切换 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184C451A1A2D9846009C9416 /* Build configuration list for PBXNativeTarget "04-storyboard-控制器切换" */;
+			buildPhases = (
+				184C44F31A2D9846009C9416 /* Sources */,
+				184C44F41A2D9846009C9416 /* Frameworks */,
+				184C44F51A2D9846009C9416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "04-storyboard-控制器切换";
+			productName = "04-storyboard-控制器切换";
+			productReference = 184C44F71A2D9846009C9416 /* 04-storyboard-控制器切换.app */;
+			productType = "com.apple.product-type.application";
+		};
+		184C450F1A2D9846009C9416 /* 04-storyboard-控制器切换Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184C451D1A2D9846009C9416 /* Build configuration list for PBXNativeTarget "04-storyboard-控制器切换Tests" */;
+			buildPhases = (
+				184C450C1A2D9846009C9416 /* Sources */,
+				184C450D1A2D9846009C9416 /* Frameworks */,
+				184C450E1A2D9846009C9416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184C45121A2D9846009C9416 /* PBXTargetDependency */,
+			);
+			name = "04-storyboard-控制器切换Tests";
+			productName = "04-storyboard-控制器切换Tests";
+			productReference = 184C45101A2D9846009C9416 /* 04-storyboard-控制器切换Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		184C44EF1A2D9846009C9416 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = heima;
+				TargetAttributes = {
+					184C44F61A2D9846009C9416 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					184C450F1A2D9846009C9416 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 184C44F61A2D9846009C9416;
+					};
+				};
+			};
+			buildConfigurationList = 184C44F21A2D9846009C9416 /* Build configuration list for PBXProject "04-storyboard-控制器切换" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 184C44EE1A2D9846009C9416;
+			productRefGroup = 184C44F81A2D9846009C9416 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				184C44F61A2D9846009C9416 /* 04-storyboard-控制器切换 */,
+				184C450F1A2D9846009C9416 /* 04-storyboard-控制器切换Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		184C44F51A2D9846009C9416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184C45061A2D9846009C9416 /* Main.storyboard in Resources */,
+				184C450B1A2D9846009C9416 /* LaunchScreen.xib in Resources */,
+				184C45081A2D9846009C9416 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184C450E1A2D9846009C9416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		184C44F31A2D9846009C9416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184C45031A2D9846009C9416 /* ViewController.m in Sources */,
+				184C45001A2D9846009C9416 /* AppDelegate.m in Sources */,
+				184C44FD1A2D9846009C9416 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184C450C1A2D9846009C9416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184C45171A2D9846009C9416 /* _4_storyboard______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		184C45121A2D9846009C9416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 184C44F61A2D9846009C9416 /* 04-storyboard-控制器切换 */;
+			targetProxy = 184C45111A2D9846009C9416 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		184C45041A2D9846009C9416 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184C45051A2D9846009C9416 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		184C45091A2D9846009C9416 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184C450A1A2D9846009C9416 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		184C45181A2D9846009C9416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		184C45191A2D9846009C9416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		184C451B1A2D9846009C9416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "04-storyboard-控制器切换/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		184C451C1A2D9846009C9416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "04-storyboard-控制器切换/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		184C451E1A2D9846009C9416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "04-storyboard-控制器切换Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/04-storyboard-控制器切换.app/04-storyboard-控制器切换";
+			};
+			name = Debug;
+		};
+		184C451F1A2D9846009C9416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "04-storyboard-控制器切换Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/04-storyboard-控制器切换.app/04-storyboard-控制器切换";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		184C44F21A2D9846009C9416 /* Build configuration list for PBXProject "04-storyboard-控制器切换" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184C45181A2D9846009C9416 /* Debug */,
+				184C45191A2D9846009C9416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184C451A1A2D9846009C9416 /* Build configuration list for PBXNativeTarget "04-storyboard-控制器切换" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184C451B1A2D9846009C9416 /* Debug */,
+				184C451C1A2D9846009C9416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		184C451D1A2D9846009C9416 /* Build configuration list for PBXNativeTarget "04-storyboard-控制器切换Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184C451E1A2D9846009C9416 /* Debug */,
+				184C451F1A2D9846009C9416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 184C44EF1A2D9846009C9416 /* Project object */;
+}

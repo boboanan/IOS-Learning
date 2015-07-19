@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184C45771A2DAF6C009C9416 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45761A2DAF6C009C9416 /* main.m */; };
+		184C457A1A2DAF6C009C9416 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45791A2DAF6C009C9416 /* AppDelegate.m */; };
+		184C457D1A2DAF6C009C9416 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C457C1A2DAF6C009C9416 /* ViewController.m */; };
+		184C45801A2DAF6C009C9416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184C457E1A2DAF6C009C9416 /* Main.storyboard */; };
+		184C45821A2DAF6C009C9416 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184C45811A2DAF6C009C9416 /* Images.xcassets */; };
+		184C45851A2DAF6C009C9416 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184C45831A2DAF6C009C9416 /* LaunchScreen.xib */; };
+		184C45911A2DAF6C009C9416 /* _6____Modal__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45901A2DAF6C009C9416 /* _6____Modal__Tests.m */; };
+		184C45A41A2DAFA7009C9416 /* HMAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C459C1A2DAFA7009C9416 /* HMAnimatedTransitioning.m */; };
+		184C45A51A2DAFA7009C9416 /* HMPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C459E1A2DAFA7009C9416 /* HMPresentationController.m */; };
+		184C45A61A2DAFA7009C9416 /* HMTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45A01A2DAFA7009C9416 /* HMTransition.m */; };
+		184C45A71A2DAFA7009C9416 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45A31A2DAFA7009C9416 /* UIView+Extension.m */; };
+		184C45AA1A2DAFD0009C9416 /* HMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45A91A2DAFD0009C9416 /* HMSecondViewController.m */; };
+		184C45AD1A2DB05B009C9416 /* HMThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C45AC1A2DB05B009C9416 /* HMThreeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		184C458B1A2DAF6C009C9416 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184C45691A2DAF6C009C9416 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 184C45701A2DAF6C009C9416;
+			remoteInfo = "06-自定义Modal动画";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		184C45711A2DAF6C009C9416 /* 06-自定义Modal动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "06-自定义Modal动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		184C45751A2DAF6C009C9416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184C45761A2DAF6C009C9416 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		184C45781A2DAF6C009C9416 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		184C45791A2DAF6C009C9416 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		184C457B1A2DAF6C009C9416 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		184C457C1A2DAF6C009C9416 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		184C457F1A2DAF6C009C9416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		184C45811A2DAF6C009C9416 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		184C45841A2DAF6C009C9416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		184C458A1A2DAF6C009C9416 /* 06-自定义Modal动画Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "06-自定义Modal动画Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		184C458F1A2DAF6C009C9416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184C45901A2DAF6C009C9416 /* _6____Modal__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_6____Modal__Tests.m"; sourceTree = "<group>"; };
+		184C459B1A2DAFA7009C9416 /* HMAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAnimatedTransitioning.h; sourceTree = "<group>"; };
+		184C459C1A2DAFA7009C9416 /* HMAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAnimatedTransitioning.m; sourceTree = "<group>"; };
+		184C459D1A2DAFA7009C9416 /* HMPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPresentationController.h; sourceTree = "<group>"; };
+		184C459E1A2DAFA7009C9416 /* HMPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPresentationController.m; sourceTree = "<group>"; };
+		184C459F1A2DAFA7009C9416 /* HMTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMTransition.h; sourceTree = "<group>"; };
+		184C45A01A2DAFA7009C9416 /* HMTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMTransition.m; sourceTree = "<group>"; };
+		184C45A11A2DAFA7009C9416 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		184C45A21A2DAFA7009C9416 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		184C45A31A2DAFA7009C9416 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		184C45A81A2DAFD0009C9416 /* HMSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSecondViewController.h; sourceTree = "<group>"; };
+		184C45A91A2DAFD0009C9416 /* HMSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSecondViewController.m; sourceTree = "<group>"; };
+		184C45AB1A2DB05B009C9416 /* HMThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMThreeViewController.h; sourceTree = "<group>"; };
+		184C45AC1A2DB05B009C9416 /* HMThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMThreeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		184C456E1A2DAF6C009C9416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184C45871A2DAF6C009C9416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		184C45681A2DAF6C009C9416 = {
+			isa = PBXGroup;
+			children = (
+				184C45731A2DAF6C009C9416 /* 06-自定义Modal动画 */,
+				184C458D1A2DAF6C009C9416 /* 06-自定义Modal动画Tests */,
+				184C45721A2DAF6C009C9416 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		184C45721A2DAF6C009C9416 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				184C45711A2DAF6C009C9416 /* 06-自定义Modal动画.app */,
+				184C458A1A2DAF6C009C9416 /* 06-自定义Modal动画Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		184C45731A2DAF6C009C9416 /* 06-自定义Modal动画 */ = {
+			isa = PBXGroup;
+			children = (
+				184C459A1A2DAF8E009C9416 /* Modal */,
+				184C45781A2DAF6C009C9416 /* AppDelegate.h */,
+				184C45791A2DAF6C009C9416 /* AppDelegate.m */,
+				184C457B1A2DAF6C009C9416 /* ViewController.h */,
+				184C457C1A2DAF6C009C9416 /* ViewController.m */,
+				184C45A81A2DAFD0009C9416 /* HMSecondViewController.h */,
+				184C45A91A2DAFD0009C9416 /* HMSecondViewController.m */,
+				184C457E1A2DAF6C009C9416 /* Main.storyboard */,
+				184C45811A2DAF6C009C9416 /* Images.xcassets */,
+				184C45831A2DAF6C009C9416 /* LaunchScreen.xib */,
+				184C45741A2DAF6C009C9416 /* Supporting Files */,
+				184C45AB1A2DB05B009C9416 /* HMThreeViewController.h */,
+				184C45AC1A2DB05B009C9416 /* HMThreeViewController.m */,
+			);
+			path = "06-自定义Modal动画";
+			sourceTree = "<group>";
+		};
+		184C45741A2DAF6C009C9416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				184C45751A2DAF6C009C9416 /* Info.plist */,
+				184C45761A2DAF6C009C9416 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		184C458D1A2DAF6C009C9416 /* 06-自定义Modal动画Tests */ = {
+			isa = PBXGroup;
+			children = (
+				184C45901A2DAF6C009C9416 /* _6____Modal__Tests.m */,
+				184C458E1A2DAF6C009C9416 /* Supporting Files */,
+			);
+			path = "06-自定义Modal动画Tests";
+			sourceTree = "<group>";
+		};
+		184C458E1A2DAF6C009C9416 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				184C458F1A2DAF6C009C9416 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		184C459A1A2DAF8E009C9416 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				184C459B1A2DAFA7009C9416 /* HMAnimatedTransitioning.h */,
+				184C459C1A2DAFA7009C9416 /* HMAnimatedTransitioning.m */,
+				184C459D1A2DAFA7009C9416 /* HMPresentationController.h */,
+				184C459E1A2DAFA7009C9416 /* HMPresentationController.m */,
+				184C459F1A2DAFA7009C9416 /* HMTransition.h */,
+				184C45A01A2DAFA7009C9416 /* HMTransition.m */,
+				184C45A11A2DAFA7009C9416 /* Singleton.h */,
+				184C45A21A2DAFA7009C9416 /* UIView+Extension.h */,
+				184C45A31A2DAFA7009C9416 /* UIView+Extension.m */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		184C45701A2DAF6C009C9416 /* 06-自定义Modal动画 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184C45941A2DAF6C009C9416 /* Build configuration list for PBXNativeTarget "06-自定义Modal动画" */;
+			buildPhases = (
+				184C456D1A2DAF6C009C9416 /* Sources */,
+				184C456E1A2DAF6C009C9416 /* Frameworks */,
+				184C456F1A2DAF6C009C9416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "06-自定义Modal动画";
+			productName = "06-自定义Modal动画";
+			productReference = 184C45711A2DAF6C009C9416 /* 06-自定义Modal动画.app */;
+			productType = "com.apple.product-type.application";
+		};
+		184C45891A2DAF6C009C9416 /* 06-自定义Modal动画Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184C45971A2DAF6C009C9416 /* Build configuration list for PBXNativeTarget "06-自定义Modal动画Tests" */;
+			buildPhases = (
+				184C45861A2DAF6C009C9416 /* Sources */,
+				184C45871A2DAF6C009C9416 /* Frameworks */,
+				184C45881A2DAF6C009C9416 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184C458C1A2DAF6C009C9416 /* PBXTargetDependency */,
+			);
+			name = "06-自定义Modal动画Tests";
+			productName = "06-自定义Modal动画Tests";
+			productReference = 184C458A1A2DAF6C009C9416 /* 06-自定义Modal动画Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		184C45691A2DAF6C009C9416 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = heima;
+				TargetAttributes = {
+					184C45701A2DAF6C009C9416 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					184C45891A2DAF6C009C9416 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 184C45701A2DAF6C009C9416;
+					};
+				};
+			};
+			buildConfigurationList = 184C456C1A2DAF6C009C9416 /* Build configuration list for PBXProject "06-自定义Modal动画" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 184C45681A2DAF6C009C9416;
+			productRefGroup = 184C45721A2DAF6C009C9416 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				184C45701A2DAF6C009C9416 /* 06-自定义Modal动画 */,
+				184C45891A2DAF6C009C9416 /* 06-自定义Modal动画Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		184C456F1A2DAF6C009C9416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184C45801A2DAF6C009C9416 /* Main.storyboard in Resources */,
+				184C45851A2DAF6C009C9416 /* LaunchScreen.xib in Resources */,
+				184C45821A2DAF6C009C9416 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184C45881A2DAF6C009C9416 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		184C456D1A2DAF6C009C9416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184C457D1A2DAF6C009C9416 /* ViewController.m in Sources */,
+				184C45A61A2DAFA7009C9416 /* HMTransition.m in Sources */,
+				184C45AD1A2DB05B009C9416 /* HMThreeViewController.m in Sources */,
+				184C45A41A2DAFA7009C9416 /* HMAnimatedTransitioning.m in Sources */,
+				184C45AA1A2DAFD0009C9416 /* HMSecondViewController.m in Sources */,
+				184C45A71A2DAFA7009C9416 /* UIView+Extension.m in Sources */,
+				184C457A1A2DAF6C009C9416 /* AppDelegate.m in Sources */,
+				184C45A51A2DAFA7009C9416 /* HMPresentationController.m in Sources */,
+				184C45771A2DAF6C009C9416 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184C45861A2DAF6C009C9416 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184C45911A2DAF6C009C9416 /* _6____Modal__Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		184C458C1A2DAF6C009C9416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 184C45701A2DAF6C009C9416 /* 06-自定义Modal动画 */;
+			targetProxy = 184C458B1A2DAF6C009C9416 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		184C457E1A2DAF6C009C9416 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184C457F1A2DAF6C009C9416 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		184C45831A2DAF6C009C9416 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				184C45841A2DAF6C009C9416 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		184C45921A2DAF6C009C9416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		184C45931A2DAF6C009C9416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		184C45951A2DAF6C009C9416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "06-自定义Modal动画/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		184C45961A2DAF6C009C9416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "06-自定义Modal动画/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		184C45981A2DAF6C009C9416 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "06-自定义Modal动画Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/06-自定义Modal动画.app/06-自定义Modal动画";
+			};
+			name = Debug;
+		};
+		184C45991A2DAF6C009C9416 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "06-自定义Modal动画Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/06-自定义Modal动画.app/06-自定义Modal动画";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		184C456C1A2DAF6C009C9416 /* Build configuration list for PBXProject "06-自定义Modal动画" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184C45921A2DAF6C009C9416 /* Debug */,
+				184C45931A2DAF6C009C9416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184C45941A2DAF6C009C9416 /* Build configuration list for PBXNativeTarget "06-自定义Modal动画" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184C45951A2DAF6C009C9416 /* Debug */,
+				184C45961A2DAF6C009C9416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		184C45971A2DAF6C009C9416 /* Build configuration list for PBXNativeTarget "06-自定义Modal动画Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184C45981A2DAF6C009C9416 /* Debug */,
+				184C45991A2DAF6C009C9416 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 184C45691A2DAF6C009C9416 /* Project object */;
+}
