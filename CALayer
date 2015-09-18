@@ -1,0 +1,41 @@
+CALayer
+UIView 调用 drawRect
+
+layer  ShadowOpacity
+       ShadowColor
+       ShadowRadius
+       cornerRadius
+       borderColor
+       borderWidth
+       
+       //如果设置图片符合layer样式
+       _imageView.layer.maskToBounds = YES;
+       
+  0________________x
+  |\               \
+  | \             | \            _imageView.layer.transform = CATransform3DMakeRotation(M_PI,0,0,1);
+  |  \            |  \
+  |   \           |   \
+  |    \          |    \
+  |_____\z______________\
+  y\    |               |
+    \   |               |
+     \  |               |
+      \ |               |
+       \|_______________|
+       
+  //变换时可添加动画
+  [UIView animatedWithDuration:nil animation:...];
+  
+  //平移
+  _imageView.layer.transform = CATransform3DMakeScale(0.5,0.5,1);
+   _imageView.layer.transform = CATransform3DMakeTransLation(200,200,0);//会清空，从0开始
+   
+   KVC:[_imageView.layer setValue:id  forKeyPath:@"transform"];//此方式存在bug
+                              //  对象  将...赋值给....   
+       [_imageView.layer setValue:@M_PI forKeyPath:@"transform.rotation"];
+       //二维旋转
+       
+       [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5,0.5,1)];    
+      
+        
