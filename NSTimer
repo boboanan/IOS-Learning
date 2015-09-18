@@ -1,0 +1,15 @@
+//获取触控点位置
+-(void)touchesBegan:(NSSet *)touches WithEvent:(UIEvent *)event
+{
+  UITouch *touch = [touches anyObject];
+  CGPoint pos = [touch locationInView:self.view];
+}
+
+
+//时钟
+NSCalendar *canlendar = [NSCalendar currentCalendar];
+NSDateComponents *components = [canlendar components:NACalendarUnitSecond fromDate:[NSDate date]];//获取日期组件
+CGFloat sec = components.second;//获取秒数
+
+//创建定时器
+[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(update) userInfo:nil repeats:YES];
