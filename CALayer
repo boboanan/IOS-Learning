@@ -1,4 +1,23 @@
 CALayer
+CALayer是定义在QuartzCore框架中的[Core Animation];
+CGImageRef , CGColorRef两种数据类型定义在CoreGraphics框架中
+UIColor,UIImage是定义在UIKit框架中
+QuartzCore框架和CoreGraphics框架是可以跨平台使用的,ios,Mac Os上都能用,UIKit只能在ios上使用
+为了保证可移植性，QuartzCore不能使用UIImage,UIColor,只能使用CGImageRef,CGColorRef;
+
+一、
+自定义图层
+ CALayer *layer = [CALayer layer];
+ //尺寸
+ layer.bounds = CGRectMake(0,0,200,200);
+ //位置
+ layer.position = CGPointMake(100,100);
+ //颜色
+ layer.backgroundColor = [UIColor redColor].CGColor;
+ [self.view.layer addSubView:layer];
+ layer.contents = (id)[UIImage imageNamed:...].CGImage;
+
+二、
 UIView 调用 drawRect
 
 layer  ShadowOpacity
@@ -10,7 +29,8 @@ layer  ShadowOpacity
        
        //如果设置图片符合layer样式
        _imageView.layer.maskToBounds = YES;
-       
+  
+ 三、     
   0________________x
   |\               \
   | \             | \            _imageView.layer.transform = CATransform3DMakeRotation(M_PI,0,0,1);
@@ -38,4 +58,26 @@ layer  ShadowOpacity
        
        [NSValue valueWithCATransform3D:CATransform3DMakeScale(0.5,0.5,1)];    
       
-        
+四、
+1、UIView(交互用)&CALayer
+   UIView能处理事件，CALayer不能处理用户触摸事件
+   
+2、CALayer两个重要属性
+@property CGPoint position;
+@property CGPoint anchorPoint;//定位点，x，y取值为0～1，默认为（0.5，0.5）,说明锚点在Layer中点
+
+五、隐式动画
+每一个UIView内部都默认关联一个CALayer，称为Root Layer（根层）
+所有的非Root Layer，就是手动创建的CALayer对象，都存在隐式动画
+当对非Root Layer部分属性进行修改时，默认会产生一些动画
+而这些属性称为Animatable Properties（可动画属性）
+
+常见Animatable Properties：
+bounds， backgroundColor，  position
+
+取消隐式动画
+[CATransaction begin]//开启事务
+[CATransaction setDisableAction:YES];//取消动画
+layer.position = CGPointMake(100,100);
+[CATransaction commit];//提交事务
+ 
