@@ -1,4 +1,4 @@
-CoreAnimation核心动画
+Core_Animation核心动画
   跨平台 ios, Mac Os
   Core Animation的动画执行过程都是在后台操作，不会阻塞主线程
   Core Animation是直接作用在CALayer上的，并非UIView
@@ -35,3 +35,19 @@ CoreAnimation核心动画
  anim.KeyPath = @"position";
  UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0,0,200,200)];
  anim.path = path.CGPath;
+
+
+图标抖动
+//长按
+UILongPressGestureRecognizer *longPres = [UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+[_imageView addGestureRecognizer:longPres];//_imageView需要开启交互功能
+-(void)longPress:(UILongPressGestureRecognizer *)longPress{
+   if(longPress.state == UIGestureRecognizerStateBegan){//第一次按开始
+     CAKeyframeAnimation *anim = [CAKeyframeAnimation animation];
+     anim.keyPath = @"transform.rotation";
+     anim.values = @[@(..),@(..),@(..)];//@[左转5度，右转5度，再左转5度];
+     anim.repeatCount = MAXFLOAT;
+     [_imageView.layer addAnimation:anim forKey:nil];
+   }
+}
+//anim.from.value  从...开始
