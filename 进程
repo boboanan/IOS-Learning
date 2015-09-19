@@ -39,3 +39,19 @@
   NSLog(@"%@",[NSThread currentThread]);
   
 将耗时操作放在子线程，能同时处理按钮点击和耗时操作
+
+ios中多线程的实现方案
+  技术方案          简介                  语言      线程生命周期          使用频率
+  pthread         通用多线程API            c          程序员管理           几乎不用
+                  适用于Unix/linux/Win
+                  跨平台/可移植
+                  使用难度大
+  
+  NSThread        面向对象
+                  简单易用，可直接操作线程对象
+ 
+ 
+ GCD
+ 
+ 
+ NSOperation
