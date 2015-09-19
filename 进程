@@ -32,9 +32,20 @@
            @synchronized(self){//小括号里放的是锁对象(locker MSobject)
               //code
            }
-     2、互斥锁缺点:消耗cpu大量资源 
+     2、互斥锁缺点:消耗cpu大量资源
+     原子属性和非原子属性
+     atomic：原子属性  为setter方法加锁，线程安全，耗大量资源
+     nonatomic：非原子属性，不为setter方法加锁，非线程安全
+     ios开发
+        所有属性都声明为nonatomic
+        尽量将加锁资源抢夺的业务逻辑交给服务器处理，减小移动客户端的压力
+
 
 线程同步：多条线程在同一条线上执行（按顺序执行任务）
+
+线程间通信体现
+   一个线程传递数据给另一个线程
+   在一个线程中执行完特定任务后，转到另一个线程继续执行任务
 
 子线程：（异步线程，后台线程）
 
@@ -124,4 +135,73 @@ NSThread
    [NSThread exit];
    一旦线程停止（死亡）了,就不能再开启，比如：start死亡后不能再start，要再创建一个
    
+   下载图片——————————线程件通信例子＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+   NSString *urlStr = @"http://...jpg";
+   NSURL *url = [NSURL URLWithString:urlStr];
+   //耗时操作******
+   NSData *data = [NSData dataWithContentOfURL:url];
+   //下载图片二进制数据
+   UIImage *image = [UIImage imageWithData:data]
    
+   //************回到主线成刷新UI界面
+   [self performSelectorOnMainThread:@selector(downloadFinished:) WithObject:image waitUntilDone:YES];
+   主线程:self.imageView.image = image;//非原子
+   
+   简化代码
+   [self.imageView performSelectorOnMainThread:@selector(setImage:) withObject:image waituntilDone:YES];
+                                                                                     //意思时等主线程执行完selector才会往下执行
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+GCD
+ *GrandCentralDispatch
+ *纯c语言
+ *优势
+    GCD是苹果公司为多核的并行运算提出的解决方案
+    GCD会自动利用更多的cpu内核
+    GCD会自动管理线程的生命周期（创建线程，调度任务，销毁线程）
+    程序员只需告诉GCD想要执行什么任务，不需编写任何线程管理代码
+    
+ *任务和队列
+   GCD中两个核心概念
+   1、定制任务
+   2、将任务添加到队列中（队列遵循FIFO原则）
+
+ *GCD中2个执行任务的函数
+   1、同步的方式执行任务
+      dispatch_sync(dispatch_queue_t queue,dispatch_block_t block);//queue：队列  block：任务
+   2、异步方式
+      dispatch_async(dispatch_queue_t queue, diapatch_block_t block);
+   同步：只能在当前线程中执行任务，不具备开启新线程的能力
+   异步：可以在新的线程中执行任务，具备开启新线程的能力
+   
+ *GCD队列类型
+    1、并发队列
+         可以让多个任务并发执行，功能只有在异步函数中有效
+         GCD默认提供了全局队列；dispatch_get_global_queue
+    2、串行队列
+     
+ *同步和异步主要影响：能不能开启新的线程
+  并发和串行：任务的执行方式
+  
+ *dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0)
+                                                    //此为全局并发队列优先级
+  dispatch_async(queue,^{
+  })
+  dispatch_sync(queue,^{});
+         同步   全局队列
+         
+   async+串行队列 
+   dispatch_queue_t queue = dispatch_queue_create("cn.baikaishui.queue",NULL);
+   dispatch_async (queue,^{});//只开一条线程
+   
+ * 串行队列
+     GCD中获得串行队列有2种途径
+     1、使用dispatch_queue_create函数创建
+     2、使用主队列（跟主线程相关联的队列）
+        ＊主队列是GCD自带的一种特殊的串行队列
+        ＊放在主队列的任务，都会放到主线程执行
+        ＊使用dispatch_get_main_queue()获得主队列
+        *注：async+主队列 ——————————可以用
+             sync +主队列 ——————————不能用
+             如果是非ARC，需要释放创建的队列dispatch_release(queue);
+
+ 
