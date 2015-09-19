@@ -22,6 +22,20 @@
   开启多线程需要占用一定的内存空间（默认情况下，主线程占用1M，子线程占用512Kb），如果开启大量线程，会占用大量内存，降低性能
   程序设计更加复杂，如线程间通信，多线程的数据共享
   
+多线程的安全隐患
+  多个线程可能访问同一块资源
+  当多个线程访问同一资源时，容易引发数据错乱和数据安全问题
+  安全隐患解决方法————————互斥锁
+     1、  @synchronized（锁对象）{//需要锁定的代码}
+       //锁定一份代码只用一把锁，用多把是无效的
+           如
+           @synchronized(self){//小括号里放的是锁对象(locker MSobject)
+              //code
+           }
+     2、互斥锁缺点:消耗cpu大量资源 
+
+线程同步：多条线程在同一条线上执行（按顺序执行任务）
+
 子线程：（异步线程，后台线程）
 
 什么是主线程
@@ -34,6 +48,26 @@
 主线程使用注意
   别将比较耗时的操作放在主线程
   耗时操作会卡住主线程序，严重影响UI流畅度
+  
+线程的状态
+      start                    cpu调度当前线程
+  新建——————>就绪（Runnable）—————————————————>运行（Running）——————————>死亡（Dead）（线程任务执行完毕/异常/强制退出）
+                       ^    <——————————————————/
+                        \     cpu调度其他线程 /
+               sleep到时 \                   /调用sleep方法
+                得到同步锁\                 /等待同步锁
+                           \               <
+                                阻塞(blocked)
+   
+  ————————————————————————————————————————
+ ｜ ————————————————————————————  内存   ｜
+ ｜｜可调用线程池              ｜        ｜
+ ｜｜ ——————————  ——————————   ｜        ｜
+ ｜｜｜线程对象｜｜其他线程｜  ｜        ｜
+ ｜｜ ————｜————  ——————————   ｜        ｜
+ ｜ ——————｜————————————————————         ｜
+ ｜         ——>  阻塞时                  ｜
+  ————————————————————————————————————————
   
 判断当前处在什么线程
   NSLog(@"%@",[NSThread currentThread]);
@@ -63,3 +97,31 @@ pthread
    创建线程
    pthread_t  myRestrict;
    pthread_create(&myRestrict,NULL,函数指针,NULL);
+
+NSThread
+   一个NSThread对象就代表一条线程
+   //创建，启动线程
+   NSThread *thread = [[NSThread allo] initWithTarget:self selector:@selector(run) object:nil];
+   [thread start];
+   
+   [NSThread mainThread];//主线程
+   [thread isMainThread]
+   [NSthread isMainThread];//当前线程是否为主线程
+   thread.name = @"..";//线程名字
+
+   创建线程后自动启动线程
+   [NsThread detachNewThreadSelector:   toTarget:  WithObject: ];//无法详细配置
+                                                            //^此处为传递的参数 
+   
+   隐式创建子线程并启动
+   [self performSelectorInBackground:@selector()  withObject:  ];
+   
+   阻塞
+   [NSThread sleepForTimeInterval:5];//睡眠5秒钟
+   [NSThread sleepUntillDate:[NSDate dateWithTimeIntervalSinceNow:5]];
+   
+   强制退出——————中间加return
+   [NSThread exit];
+   一旦线程停止（死亡）了,就不能再开启，比如：start死亡后不能再start，要再创建一个
+   
+   
