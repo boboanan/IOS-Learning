@@ -51,3 +51,75 @@ UILongPressGestureRecognizer *longPres = [UILongPressGestureRecognizer alloc] in
    }
 }
 //anim.from.value  从...开始
+
+
+转场动画
+CATransition *anim = [CATransition animation];
+anim.type = @"cube";//3d旋转
+//@"push",@"rippleEffect",@"pageCurl"
+anim.startProgress = 0.8;//从0.8处开始
+anim.subtype = KCATransitionFromLeft;
+
+动画组
+CAAnimationGroup *group = [CAAnimationGroup animation];
+group.animations = @[rotation,position];
+[layer addAnimation:group forKey:nil];
+
+UIView封装的动画
+anim.delegate = self;
+-(void)animationDidStop:(CAAnimation *)anim finish:(BOOL)flag{
+}
+
+核心动画都是假象，不能改变layer真实属性的值，展示的位置和实际的位置不同，实际位置永远在最开始的位置
+
+UIView转场动画（一般不用）
+[UIView transitionWithView:self.view duration:0.5 option:UIViewAnimationOptionTransitionCurUp animation:nil completion:nil];
+
+转轮
+[[NSBundle mainBundle] loadNibNamed:@".." owner:nil option:nil][0];
+//如果是xib连线
+(id)initWithCoder:(NSCoder *)aDecoder  //若还没连好线 =null
+-(void)awakeFromNib   //连好线
+
+//裁剪图片
+CGImageCreateWithImageInRect(CGImageRef, CGRect);
+                          //裁剪的图片    尺寸
+[UIImage imageWithCGImage:..];
+CGImage和像素相关
+imageW = 40 * [UIScreen mainScreen].scale;//判断是什么屏
+button.imageView.contentMode = UIViewContentModeCenter;
+
+自定义button
+//重写方法
+-(CGRect)imageRectForContentRect:(CGRect)contentRect{
+   
+   return CGRectMake(....);
+}
+
+//无highlighted
+-(void)setHighlighted:(BOOL)highlighted
+{
+
+}
+//forControlEvent:UIControlEventTouchDown
+
+//开始旋转
+-(void)startRotating
+{
+   CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
+   [link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+}
+
+-(void)update
+{
+   _rotationView.transform = CGAffineTransformRotate(_rotationView.transform, angle2radiom(45/60.0));
+                                                                              //自定义宏
+}
+//如果有问题，把Auto layout去掉
+_link.paused = YES;//暂停
+
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW,(int64_t)() *NCEC_PER_SEC)),dispatch_get_main_queue(),^{
+
+});
+取角
+CGFloat angle = atan2(_selectedButton.transform.b,_selectedButton.transform.a);
