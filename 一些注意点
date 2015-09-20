@@ -1,8 +1,26 @@
-放入代码仓库时，变量or代码 <#code#>
+*放入代码仓库时，变量or代码 <#code#>
 
-原子属性和非原子属性
+*原子属性和非原子属性
    atomic：原子属性  为setter方法加锁，线程安全，耗大量资源
    nonatomic：非原子属性，不为setter方法加锁，非线程安全
    ios开发
      所有属性都声明为nonatomic
      尽量将加锁资源抢夺的业务逻辑交给服务器处理，减小移动客户端的压力
+
+*Foundation:OC框架
+ Core Foundation:c语言框架
+   两者数据类型可以相互转换。
+   例：
+      NSString *str = @"123";//Foundation
+      CFStringRef str2 = (__bridge CFStringRef)(str);//Core Foundation
+                         //桥接（跨框架转换需要桥接）
+      //CFArrayRef-NSArray      CFDictionary-NSDictionary    CFNumberRef-NSNumber
+    
+   CoreFoundation中手动创建的数据类型，都需要手动释放
+   例：
+     CFArrayRef array = CFArrayCreate(NULL,NULL,10,NULL);
+     CFRelease(array);
+     
+*凡是函数名中带有create/copy/new/retain等字眼，都应该再不需要使用这个数据时进行release
+ GCD的数据类型在ARC环境下不需要再做release
+ CF（Core Foundation）的数据类型在ARC环境下还是需要再做release
