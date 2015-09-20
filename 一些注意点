@@ -29,3 +29,29 @@
      1、System样式的按钮无法设置iage，（setImage）
      2、属性名不能以new开头
      3、当前对象self只能在init开肉的构造方法中进行赋值
+     
+*配合xib的.m文件
+ +(instancetype)toolbar{
+    return [[[NSBundle mainBundle] loadNibNamed:@"Toolbar" owner:nil option:nil] lastObject];
+ }
+ 控制器里
+ Toolbar *tool = [Toolbar toolbar];
+ [self.view addSubview:tool];
+ 增加监听
+   1、[tool addGestureRecognizer:[[UITapGestureRecognizer allo] initWithTarget:self action:@selector(tapTool)];
+   2、storyboard将手势拖入storyboard中，拖线
+   3、拖入xib中，会发生错误:[UITapGestureRecognizer superview]
+      分析：
+        方法属于谁：UIView
+      结论：
+        错误将UITapGestureRecognizer当作UIView来使用
+        .m改为[..  firstObject]   xib中有多个对象，要分清楚
+ 
+ *xib的加载问题
+   控制器默认会自动找对应的xib来创建View
+   （顺序从上到下）
+  ｜ 1、去掉Controller这个单词后同名的xib
+   > 2、完全同名的Xib
+   
+   修改了xib后，会有缓存，先删除软件，在clean工程
+ 
