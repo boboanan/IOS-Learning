@@ -24,3 +24,8 @@
 *凡是函数名中带有create/copy/new/retain等字眼，都应该再不需要使用这个数据时进行release
  GCD的数据类型在ARC环境下不需要再做release
  CF（Core Foundation）的数据类型在ARC环境下还是需要再做release
+ 
+*注意：
+     1、System样式的按钮无法设置iage，（setImage）
+     2、属性名不能以new开头
+     3、当前对象self只能在init开肉的构造方法中进行赋值
