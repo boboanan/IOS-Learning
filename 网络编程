@@ -1,0 +1,40 @@
+网络编程
+*基本概念
+  客户端（client）                      <————————      <————————
+  服务器（Server）                 客户端————————>服务器————————>数据库
+  请求（Request）                  前端               后     端
+  响应（Response）                 ios，andriod       java，php，.NET
+  
+  服务器
+    软件开发阶段来分：
+    远程服务器（外网服务器，正式服务器）  上线后使用
+    本地服务器（内网服务器，测试服务器）  开发测试  由于时局域网，速度快
+  
+*Mac上启动Java服务器步骤：
+  1、eclipse  （注意别有中文路径）
+  2、java服务器程序
+  3、配置服务器容器 Apache Tomcat
+  Preference->content Types->text->java SourceFile->Default encoding:UTF-8/GB18030->update
+  4、部署
+
+*本地服务器的主机地址：
+三种写法：
+1、127.0.0.1   每台及其内置IP地址，指机器本身
+2、localhost （localhost:8080/服务器名/）
+3、交换机/路由器分配的地址：真机测试用此，真机和服务器在同一个局域网内
+
+*加载plist
+  NSString *file = [[NSBundle mainBundle] pathForResource:@"apps" ofType:@"plist"];
+  NSArray *dictArray = [NSArray arrayWithContentOfFile:file];
+  
+*加载图片
+   1、在tableView代理方法用
+      URL：data   cell.imageView.image = [... imageWithData:..];
+      弊端：1、在主线程下载，卡   2、会重复下载
+   2、@property(nonatomic,strong)NSOperationQueue*queue;//懒加载
+
+  
+  
+  
+ 
+    
