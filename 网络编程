@@ -32,7 +32,7 @@
       URL：data   cell.imageView.image = [... imageWithData:..];
       弊端：1、在主线程下载，卡   2、会重复下载
    2、@property(nonatomic,strong)NSOperationQueue*queue;//懒加载
-
+      NSBlockOperation *operation = [NSBlockOperation
   
   
   
