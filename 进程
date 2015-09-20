@@ -211,3 +211,21 @@ GCD
  
  异步（async） 开启新线程 *           开启新线程 *             没开启新线程
                并发执行               串行执行                 串行执行
+
+ 线程间通信：
+    dispatch_async(全局并发队列,^{
+           //子线程下载图片
+           NSURL *url = [NSURL URLWithString:@".."];
+           NSData *data = [NSData dataWithContentOfURL:url];
+           UIImage *image = [UIImage imageWithData:data];
+           
+           //回到主线程
+           dispatch_async(主队列,^{
+              [self.button setBackgroundImage:image forState:UIControlStateNormal];
+           })
+    })
+    
+   注意：
+     1、System样式的按钮无法设置iage，（setImage）
+     2、属性名不能以new开头
+     3、当前对象self只能在init开肉的构造方法中进行赋值
