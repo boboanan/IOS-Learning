@@ -9,7 +9,7 @@
     软件开发阶段来分：
     远程服务器（外网服务器，正式服务器）  上线后使用
     本地服务器（内网服务器，测试服务器）  开发测试  由于时局域网，速度快
-  
+
 *Mac上启动Java服务器步骤：
   1、eclipse  （注意别有中文路径）
   2、java服务器程序
@@ -33,6 +33,54 @@
       弊端：1、在主线程下载，卡   2、会重复下载
    2、@property(nonatomic,strong)NSOperationQueue*queue;//懒加载
       NSBlockOperation *operation = [NSBlockOperation
+      ...
+
+*URL
+  Uniform Resource Locator统一资源定位符
+  通过一个url，能找到互联网上唯一一个资源
+  基本格式 = 协议://主机地址/路径  （协议:不同的协议，代表着不同的资源查找方式，资源传输方式。主机地址：存放资源的主机IP地址，域名）
+  
+  常见协议：
+  *HTTP     http://   超文本传输协议，访问的事远程的网络资源  
+  *file     file://（不加主机地址）访问得失本地计算机上的资源
+  *mailto   mailto:访问的时电子邮件地址
+  *FTP      ftp://  访问得失共享主机的文件资源
+  
+  HTTP
+  *规定客户端和服务器之间的数据传输格式
+  *特点
+       简单快速：HTTP协议简单，HTTP服务器的程序规模小，通信速度快
+       灵活：HTTP允许传输任意类型数据，HTTP0.9和1.0使用非持续链接，限制每次连接只处理一个请求，服务器对客户端的请求响应后马上断开，节省传输时间
+       
+       *ios发送HTTP请求方案
+           苹果原生：
+              NSURLConnection:用法简单，古老
+              NSURLSession:ios7新出技术，比NSURLConnection强大
+              CFNetwork：NSURL的底层，纯c语言
+              
+           第三方框架：
+              ASIHttpRequest：外号“HTTP终结者”，功能强大，已停止更新
+              AFNetWorking：简单易用，提供基本常用功能，维护使用者多
+              MKNetworkKit：简单易用，来自印度
+              
+          为提高开发效率，企业开发用的基本是第三方框架
+          
+          常用类：
+            NSURL:请求地址
+            NSURLRequest:一个请求（包含：1、一个url对象2、请求方法，请求头，请求体3、请求超时）
+            NSMutableURLRequest:NSURLRequest子类
+            NSURLConnection:负责发送请求，建立客户端和服务器的连接，发送NSURLRequest的数据给服务器，并收集来自服务器的响应数据
+             
+            NSURL *url = [NSURL URLWithString:@"..."];
+            NSURLRequest *request = [NSURLRequest requestWithUrl:url];
+            //发送一个同步请求（主线程发送请求）
+            NSData *data = [NSURLConnection sendSynchrononsRequest:request returningResponse:nil  error:nil];
+            
+            
+            
+  
+      
+      
   
   
   
