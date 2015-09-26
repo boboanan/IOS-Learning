@@ -78,9 +78,60 @@
             
             
             
+  cell下载图片思路——————————要沙盒缓存
+  images:图片缓存                                                          operations：操作缓存
   
-      
-      
+   根据图片的url      存在
+   去images中取图片—————————— >将图片显示在cell上
+    ｜不存在                        >
+   检查沙盒中存不存  存在           ｜
+   在 对应的图片   ——————————>加载沙盒中对应的图片
+    ｜不存在                                                          将图片存入沙盒
+   显示占位图片                                                        ｜
+    ｜                                                              刷新表格
+   根据图片的url     不存在                    下载完毕                 ｜
+   查看operations中———————————>创建下载操作——————————————————>将操作从operations中移除
+   存不存在下载操作            放到operations中               将图片当到images中
+   ｜
+   正在下载
+   
+   
+   沙盒中：
+   *Document——————（itunes会备份此文件夹）
+   *Library ————————｛Caches,Perferences(itunes会备份)
+   *tmp
+   注：大的文件备份到Caches里，tmp不安全，系统会随机清除tmp里文件
+   
+   沙盒在  ～／资料库／ApplicationSupport/iphone Simlaton/8.0/Applications/修改时间排列
+   (simpholders——————快速找沙盒插件)
+   
+   //沙盒中存图片
+   if(image){
+     appsVc.images[imageUrl] = image;
+     //UIImageJPEGRepresentation(UIImage,1.0);
+     //UIImage——>NSData——>File
+     NSData *data = UIImagePNGRepresentation(image);
+     //获得Caches路径
+     NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES) lastObject];
+     //YES代表展开~号，否则时~/.../..必须为全路径
+     NSString *filename = [imageUrl lastPathcomponent];//文件的最后一个路径
+     //拼接文件路径
+     NSString *file = [caches stringByAppendingPathComponent:filename]//一定要有PathComponent因为会加路径“/”
+     [data writeToFile:file atomically:YES];
+   }
+  //沙盒中取图片 
+  if(image){
+  }else{
+    NSString *caches = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES) lastObject];
+    NSString *filename = [appicon lastPathConponent];
+    NSString *file = [caches stringByAppendingPathComponent:filename];
+    NSData *data = [NSData dataWithContentsOfFile:file];
+    if(data){
+      cell/imageView.image = [UIImage imageWithData:data];
+    }else{
+      //显示占为图片，下载图片
+    }
+  }
   
   
   
