@@ -133,6 +133,35 @@
     }
   }
   
+  SDWebImage——————>网络图片处理框架
+  功能：图片下载，图片缓存，下载进度，监听，GIF处理
+  [cell,imageView sd_setImageWith:url placeholderImage:image];//沙盒中的缓存图片会被加密
+  
+  SDWebImageOptions  options = SDWebImageRetryFailed | SDWebImageLowPriority;
+  [cell.imageView sd_setImageWithURL;url placeholderImage:placeholderImage option:options progress:^(){
+    //此block会被调用多次
+      //监听下载进度 (double)receivedSize/expectedSize
+  } completed:^(){
+  }];
+
+//在AppDelegate.m中处理整个程序的内存紧张，不单单时某个控制器，使整个程序
+#import"SDWebImageManager.h"
+-(void)applicationDidReceiveMemoryWarning:(UIApplication *)application{
+ //取消正在下载的操作
+ [[SDWebImageManager shareManager] cancelAll]
+ //清除内存缓存
+ [[SDWebImageManager shareManager].imageCache clearMemory];//clearDisk是清除沙盒
+ 
+ SDWebImage 缓存池过期时间默认时一个星期 (maxCacheAge)
+ 
+ SDWebImageManager *mgr = [SDWebImageManager sharedManager];
+ mgr.imageCache.maxCacheAge = 100*24*60*60
+ //[SDImageCache sharedImageCache]等价于mgr.imageCache
+
+}
+  
+  
+  
   
   
  
