@@ -1,0 +1,13 @@
+GCD总结
+  队列和任务
+    ＊任务：执行的操作，用block来封装
+      执行任务的函数
+         同步执行:dispatch_sync
+         异步执行:dispatch_async
+    ＊队列：存放任务
+      全局并发队列:dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
+      自己创建的串行队列:dispatch_queue_t queue = dispatch_queue_create("cn.queue",NULL);
+      主队列：dispatch_queue_t queue = dispatch_get_main_queue();
+    *常见组合
+      dispatch_async + 全局并发队列
+      dispatch_async + 自己创建的串行队列
