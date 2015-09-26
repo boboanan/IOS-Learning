@@ -159,7 +159,64 @@
  //[SDImageCache sharedImageCache]等价于mgr.imageCache
 
 }
+
+*AFNetwork监控网络状态
+  底层基于oc的NSURLConnection和NSURLSession
+#import "AFNetworking.h"
+-(void)viewDidLoad{
+  [super viewDidLoad];
+  AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+  [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus *status){
+    //当网络状态发生改变时调用次block
+    switch(status){
+      case AFNetworkReachabilityStatusReachableViaWifi:
+        NSLog(@"WIFI");
+        break;
+      case AFNetworkReachabilityStatusReachableViaWAN:
+        NSLog(@"自带网络");
+        break；
+      case AFNetworkReachabilityStatusNotReachable:
+        NSLog(@"未知网络");
+        break;
+      default:
+        break;
+    }
+  }];
+  //开始监控
+  [mgr startMonitoring];
+}
+-(void)dealloc{
+  [[AFNetworkReachabilityManager sharedManager] stopMonitoring];
+}
+
+
+*ASI
+  全称ASIHTTPRequest  HTTP终结者
+  给予底层CFNetwork框架，运行效率高
+  是非ARC
+  NSURL *url = [NSURL URLWithString:@""];
+  //创建一个请求
+  ASIHTTPRequest *request= [ASIHTTPRequest requestWithURL:url];
+  //超时设置
+  request.timeOutSeconds = 15;
+  //开始请求（同步，这行代码会卡住，等待服务器给数据）
+  [request startSynchronous];
+  //请求完毕
+  NSError *error = [request error];
+  if(error){
+  }else{
+  NSData *data = [request responseData];
+  }
   
+  *UIWebView
+    UIWebView是ios内置的浏览器控件
+    NSURL *url = [NSURL URLWithString:@""];
+    NSURLRequest *request = [NSURLRequest requestWithUrl:url];
+    [self.webView loadRequest];
+    
+    //加载本地 NSURL *url = [[NSBundle mainBundle] URLForResource:@"1" withExtension:@"pptx"];
+    self.webView.scrollView.backgroundColor = [UIColor redColor];
+    self.webView.scalesPageToFit = YES;
   
   
   
